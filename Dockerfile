@@ -1,4 +1,6 @@
 FROM nginx:latest
 WORKDIR /Users/alishahome/Documents/Software_Engineering/Exercise-App
 COPY . .
-# CMD ./mvnw spring-boot:run
+ENV JAVA_HOME  /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
+RUN export JAVA_HOME
+RUN echo $JAVA_HOME
