@@ -73,5 +73,7 @@ Docker:
 -java home not found error: https://stackoverflow.com/questions/18144660/what-is-path-of-jdk-on-mac
 /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
 
+-Info on what to copy into container: https://www.phind.com/search?cache=ahstmilr6cvk07axos43g6jk
+
 SpringBoot:
 -In Spring Boot, port 8080 is the default port that the embedded Tomcat server uses to serve web applications. When you run a Spring Boot application without specifying a port, it automatically starts on port 8080 by default
