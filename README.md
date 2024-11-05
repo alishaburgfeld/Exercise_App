@@ -52,17 +52,19 @@ To run application:
    -- possible way to hide the desktop, try this next time: https://stackoverflow.com/questions/64533789/how-to-start-docker-desktop-with-a-cli-command-on-macos-without-showing-dashboar
 2. Start Minikube: minikube start --driver=docker
  <!-- if image and or container don't exist doesnt exist  then do steps 3-4-->
-3. Build the image: docker build -t myimage:1.0 .
+<!-- 3. Build the image: docker build -t myimage:1.0 . -->
+3. Build both images and container: docker-compose up --build
 4. get docker image id: docker images
-5. docker container run --name exercise-app-container -p 8000:8000 -d <docker image id>
-6. exec into your docker container: docker exec -it exercise-app-container sh
+<!-- 5. docker container run --name exercise-app-container -p 8000:8000 -d <docker image id> -->
+6. exec into your docker container: docker exec -it exercise_app-exercise-react-app-1 sh
 7. ./mvnw spring-boot:run
 
 Things I have learned:
 
 Docker:
 -to delete docker image = docker rmi <image id>
--to delete docker container = first stop it. docker stop <container name> then docker rm <container name>
+-to dlete docker containers: docker compose down
+-to delete docker container manually = first stop it. docker stop <container name> then docker rm <container name>
 -to see all containers (even stopped ones) = docker ps -a
 -“Dockerfile” is the instructions for building a container image. https://www.youtube.com/watch?v=LQjaJINkQXY
 
