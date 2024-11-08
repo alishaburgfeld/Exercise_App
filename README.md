@@ -63,17 +63,17 @@ Things I have learned:
 
 Docker:
 -to delete docker image = docker rmi <image id>
--to dlete docker containers: docker compose down
+-to delete docker containers: docker compose down
 -to delete docker container manually = first stop it. docker stop <container name> then docker rm <container name>
 -to see all containers (even stopped ones) = docker ps -a
+-to see logs: Docker container logs lb
 -“Dockerfile” is the instructions for building a container image. https://www.youtube.com/watch?v=LQjaJINkQXY
+
+-docker cheatsheet: https://www.javainuse.com/devOps/docker/docker-commands-cheat-sheet
 
 -“docker-compose.yml” is a configuration for launching containers from images. The “services” defined in your docker-compose file can either use a pre-built image that’s pulled from a repository, or can point to a Dockerfile to initiate a build.
 
 -which dockerfile to use? https://www.techtarget.com/searchitoperations/tip/Choose-the-best-Docker-image-for-the-job-at-hand
-
--java home not found error: https://stackoverflow.com/questions/18144660/what-is-path-of-jdk-on-mac
-/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
 
 -Info on what to copy into container: https://www.phind.com/search?cache=ahstmilr6cvk07axos43g6jk
 
