@@ -1,4 +1,4 @@
-package com.allyoucanexercise.Exercise_App.model;
+package com.allyoucanexercise.Exercise_App.exercise;
 
 public class Exercise {
 
