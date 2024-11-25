@@ -30,14 +30,14 @@ public class ExerciseDaoImpl extends JdbcDaoSupport implements ExerciseDao {
         try {
 
 		String sql = "SELECT * FROM Exercise";
-		List<Map<String, Object>> rows = getJdbcTemplate().queryForList(sql);
+		List<Map<String, Object>> rows = getJdbcTexerciselate().queryForList(sql);
 
 		List<Exercise> result = new ArrayList<Exercise>();
 		for (Map<String, Object> row : rows) {
-			Exercise emp = new Exercise();
-			emp.setEmpId((String) row.get("empId"));
-			emp.setEmpName((String) row.get("empName"));
-			result.add(emp);
+			Exercise exercise = new Exercise();
+			exercise.setexerciseId((INT) row.get("exerciseId"));
+			exercise.setexerciseName((String) row.get("exerciseName"));
+			result.add(exercise);
 		}
 
 		return result;
@@ -48,11 +48,11 @@ public class ExerciseDaoImpl extends JdbcDaoSupport implements ExerciseDao {
 	}
 
 	@Override
-	public void insertExercise(Exercise Exercise) {
+	public void insertExercise(Exercise exercise) {
         try {
 
-		String sql = "INSERT INTO Exercise " + "(empId, empName) VALUES (?, ?)";
-		getJdbcTemplate().update(sql, new Object[] { Exercise.getEmpId(), Exercise.getEmpName() });
+		String sql = "INSERT INTO Exercise " + "(exerciseId, exerciseName) VALUES (?, ?)";
+		getJdbcTexerciselate().update(sql, new Object[] { exercise.getexerciseId(), exercise.getexerciseName() });
         }
         catch (SQLException e){
             throw new RuntimeException("Error inserting exercise", e);

@@ -1,29 +1,25 @@
 package com.allyoucanexercise.Exercise_App.controller;
 
-public class Exercise {
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-	private String exerciseId;
-	private String exerciseName;
+import com.allyoucanexercise.Exercise_App.model.Exercise;
+// import com.allyoucanexercise.Exercise_App.repository.ExerciseRepository;
 
-	public String getExerciseId() {
-		return exerciseId;
+@RestController
+@CrossOrigin(origins = "http://localhost:3000/")
+@RequestMapping("/api")
+public class ExerciseController {
+	
+	// @Autowired
+	// private ExerciseRepository ExerciseRepository;
+	
+	@GetMapping("/exercises")
+	public Iterable<Exercise> Exercise () {
+		return ExerciseRepository.findAll();
 	}
-
-	public void setExerciseId(String exerciseId) {
-		this.exerciseId = exerciseId;
-	}
-
-	public String getExerciseName() {
-		return exerciseName;
-	}
-
-	public void setExerciseName(String exerciseName) {
-		this.exerciseName = exerciseName;
-	}
-
-	@Override
-	public String toString() {
-		return "Exercise [exerciseId=" + exerciseId + ", exerciseName=" + exerciseName + "]";
-	}
+	
 
 }

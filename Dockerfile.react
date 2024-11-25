@@ -1,9 +1,0 @@
-FROM node:14
-WORKDIR /Exercise_App
-COPY ./exercise_react_app/package.json ./exercise_react_app/package-lock.json ./
-RUN npm install
-COPY ./exercise_react_app/ ./
-RUN npm run build
-CMD ["npm", "start"]
-
-

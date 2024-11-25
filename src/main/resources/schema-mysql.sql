@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS exercise (
-  exerciseId VARCHAR(10) NOT NULL,
+  exerciseId INT(10) NOT NULL,
   exerciseName VARCHAR(100) NOT NULL
 );
 
